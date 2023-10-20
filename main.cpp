@@ -42,7 +42,7 @@ void ByteArraySend(void)
       MicrosDelay(BitDuration);
       ByteArray[j] <<= 1;
     }
-  LL_GPIO_ResetOutputPin(get_GPIO_Port(PortB), LL_GPIO_PIN_0);
+  digitalWrite(RADIO_DIO_2_PORT, 0);
   for (int k = 0; k < 8; k++)
     MicrosDelay(BitDuration);
 }
